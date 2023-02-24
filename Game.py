@@ -11,6 +11,7 @@ pygame.display.set_caption(("Monsters invasion"))
 robot = pygame.image.load("robot.png")
 coin = pygame.image.load("coin.png")
 monster =  pygame.image.load("monster.png")
+
 # number of monsters
 number = 15
 # number of dots, which are only distractions
