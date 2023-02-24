@@ -1,12 +1,10 @@
 import pygame
 import math
- 
 pygame.init()
 width, height = 640, 480
 screen = pygame.display.set_mode((width, height))
  
 ball = pygame.image.load("ball.png")
- 
 x = 0
 y = 0
 ball_x = 2
