@@ -1,1 +1,1 @@
-Python programs which perform various tasks with or without user input.
+Python code files, which perform various functions. Most of these I have done as a part of courses taken. 
