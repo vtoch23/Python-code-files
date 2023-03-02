@@ -1,11 +1,11 @@
 import pygame
 import math
- 
+
 pygame.init()
 window = pygame.display.set_mode((640, 480))
- 
+
 robot = pygame.image.load("robot.png")
- 
+
 angle1 = 0
 angle2 = angle1+36
 angle3 = angle2+36
@@ -17,12 +17,12 @@ angle8 = angle7+36
 angle9 = angle8+36
 angle10 = angle9+36
 clock = pygame.time.Clock()
- 
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exit()
- 
+
     x = 320+math.cos(angle1)*100-robot.get_width()/2
     y = 240+math.sin(angle1)*100-robot.get_height()/2
     x2 = 320+math.cos(angle2)*100-robot.get_width()/2
@@ -43,7 +43,7 @@ while True:
     y9 = 240+math.sin(angle9)*100-robot.get_height()/2
     x10 = 320+math.cos(angle10)*100-robot.get_width()/2
     y10 = 240+math.sin(angle10)*100-robot.get_height()/2
- 
+
     window.fill((0, 0, 0))
     window.blit(robot, (x, y))
     window.blit(robot, (x2, y2))
@@ -57,7 +57,7 @@ while True:
     window.blit(robot, (x10, y10))
     
     pygame.display.flip()
- 
+
     angle1 += 0.01
     angle2 += 0.01
     angle3 += 0.01
