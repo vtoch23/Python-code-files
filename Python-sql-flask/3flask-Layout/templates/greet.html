@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    hello, {{ name }}, you are {{age}} years old and you have been registered
+    <form action="/view" method="get">
+        <input type="submit" value="view names">
+    </form>
+    <form action="/" method="get">
+        <input type="submit" value="return">
+    </form>
+
+{% endblock %}

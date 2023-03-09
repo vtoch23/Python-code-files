@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1> Names and Ages </h1>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name in names %}
+        <tr>
+            <td width="100">{{name ["name"] }}</td>
+            <td>{{name ["age"] }}</td>
+            <td>
+                <form action="/delete" method="post">
+                    <input name="name" type="hidden" value="{{ name["name"] }}">
+                    <input type="submit" value="delete entry">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
