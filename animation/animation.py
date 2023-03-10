@@ -1,6 +1,9 @@
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib as mtl
+from matplotlib import pyplot as plt
 from matplotlib.animation import FuncAnimation
+mtl.get_configdir()
+"/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages"
 
 x_data = []
 y_data = []
