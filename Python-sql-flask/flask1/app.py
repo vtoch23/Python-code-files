@@ -2,9 +2,8 @@ from flask import Flask, redirect, render_template, request
 from database import dbcon
 
 db = dbcon()
-
 app = Flask(__name__) #makes this a Flask program
-
+FLASK_APP="database.py"
 # defines a route
 @app.route("/")
 
@@ -24,10 +23,10 @@ def greet():
     db.execute('INSERT INTO names (name, age) VALUES(?,?)', (name, age))
     return render_template("greet.html", name=name, age=age)
 
-@app.route("/registrants", methods=["POST", "GET"])
-def registrants():
-    names = db.execute("SELECT * FROM names")
-    return render_template("names.html", names=names)
+@app.route("/people", methods=["POST", "GET"])
+def people():
+    people = db.execute("SELECT * FROM names")
+    return render_template("names.html", names=people)
 
 @app.route("/deregister", methods=["POST"])
 def deregister():

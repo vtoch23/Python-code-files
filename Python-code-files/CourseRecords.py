@@ -109,5 +109,6 @@ class Application:
         print("2: "+ "x"*grade2)
         print("1: "+ "x"*grade1)    
  
-course = Application()
-course.execute()
+def main(course):
+    course = Application()
+    course.execute()
