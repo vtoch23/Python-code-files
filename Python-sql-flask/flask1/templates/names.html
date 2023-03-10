@@ -9,13 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        {% for person in names %}
+        {% for name in people %}
         <tr>
-            <td>{{"person["name"]"}}</td>
-            <td>{{person["age"]}}</td>
+            <td>{{ name["name"] }}</td>
+            <td>{{ name["age"] }}</td>
             <td>
                 <form action = "/deregister" method="post">
-                    <input name="name" type="hidden" value="{{ person["name"] }}">
+                    <input name="name" type="hidden" value="{{ name["name"] }}">
                     <input type="submit" value="Deregister">
                 </form>
             </td>
